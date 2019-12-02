@@ -12,4 +12,8 @@ console.log(stringLength);
 let anotherStringLength:number=(someValue as string).length;
 console.log(anotherStringLength)
 
+for (let i = 0; i < 10; i++) {
+    setTimeout(function() { console.log(i); }, 100 * i);
+}
+
 
