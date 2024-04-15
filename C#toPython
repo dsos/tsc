@@ -1,0 +1,12 @@
+string paraSql = "select * from t_parameter";
+		SQLiteConnectionStringBuilder sqBuilder = new SQLiteConnectionStringBuilder();
+		sqBuilder.DataSource = @"d:\sqlite3\evaluate.db";
+
+		using (SQLiteConnection slConn = new SQLiteConnection(sqBuilder.ConnectionString))
+		{
+			using (SQLiteDataAdapter ap = new SQLiteDataAdapter(paraSql, slConn))
+			{
+				ap.Fill(paraDt);
+			}
+
+		}
